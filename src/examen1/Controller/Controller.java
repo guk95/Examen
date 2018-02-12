@@ -6,6 +6,8 @@
 package examen1.Controller;
 import examen1.Model.ChatBox;
 import examen1.View.ChatBoxView;
+import examen1.View.MainFrame;
+
 
 
 
@@ -18,9 +20,10 @@ public class Controller {
     
        public void Start() {
        ChatBox chatBox= new ChatBox();
-        ChatBoxView boxView= new ChatBoxView();
+//        ChatBoxView boxView= new ChatBoxView();
+        MainFrame mainFrame= new MainFrame();
         
-        Manager manager = new Manager(chatBox,boxView);
+        Manager manager = new Manager(chatBox,mainFrame);
    
 
     }

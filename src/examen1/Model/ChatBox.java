@@ -44,6 +44,11 @@ public class ChatBox extends Thread {
 
         return dateFormat.format(date);
     }
+       public String getTime() {
+        Date date = new Date();
+        SimpleDateFormat dateFormat = new SimpleDateFormat("hh:mm:ss");
+        return dateFormat.format(date);
+    }
 
     /**
      * Lee los ultimos 10 mesajes la base de datos.

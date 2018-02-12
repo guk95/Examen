@@ -28,10 +28,10 @@ public class Examen1 {
 ////          chatBox.sendtoDB("Mario","Hola de nuevo1");
 ////           chatBox.sendtoDB("Mario","Adios1");
 ////            chatBox.sendtoDB("Mario","Chao1");
-//        Controller controller= new Controller();
-//        controller.Start();
+        Controller controller= new Controller();
+        controller.Start();
 
-        System.out.println("hola mundo");
+ 
         
 
     }

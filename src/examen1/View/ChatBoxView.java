@@ -28,17 +28,14 @@ import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicSplitPaneUI;
 import javax.swing.JTextArea;
 
-/**
- *
- * @author jorge.vasquez
- */
+
 public class ChatBoxView extends JFrame {
 
     public Layout Principal;
     public JPanel GenericPanel = new JPanel();
     public JTextField send_Message = new JTextField();
     public JTextArea chatArea = new JTextArea();
-        public JTextArea chatArea1 = new JTextArea(10, 3);
+    public JTextArea chatArea1 = new JTextArea(10, 3);
 
     public ChatBoxView() {
         this.Principal = new Layout(1000, 1000, 4);
@@ -51,11 +48,11 @@ public class ChatBoxView extends JFrame {
     }
 
     private void initComponents() {
-        
-        Layout nsPanel = new Layout(1000,1000, 4);
+
+        Layout nsPanel = new Layout(1000, 1000, 4);
         chatArea.setBounds(nsPanel.getRectangle(700, 700));
-   
-        send_Message.setBounds(nsPanel.getRectangle(700, 200));     
+
+        send_Message.setBounds(nsPanel.getRectangle(700, 200));
         GenericPanel.setLayout(nsPanel.getLayOut());
         GenericPanel.setSize(nsPanel.setComponentDimension());
         GenericPanel.add(chatArea);

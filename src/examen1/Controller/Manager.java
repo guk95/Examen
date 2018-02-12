@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.event.AncestorListener;
+import examen1.View.MainFrame;
 
 /**
  *
@@ -24,16 +25,18 @@ public class Manager implements ActionListener {
 
     ChatBox chatBox;
     ChatBoxView boxView;
-    User user= new User() ;
+    MainFrame mainFrame;
+    User user = new User();
 
     public Manager() {
     }
 
-    public Manager(ChatBox chatBox, ChatBoxView boxView) {
+    public Manager(ChatBox chatBox, MainFrame mainFrame) {
         this.chatBox = chatBox;
-        this.boxView = boxView;
-        this.boxView.send_Message.addActionListener((ActionListener) this);
-        ControllerreadDB();
+        this.mainFrame = mainFrame;
+//        this.boxView.send_Message.addActionListener((ActionListener) this);
+//        ControllerreadDB();
+        Controllerclock();
 
     }
 
@@ -45,7 +48,7 @@ public class Manager implements ActionListener {
     }
 
     public void ControllersendMessage() {
-        
+
         chatBox.sendtoDB(user.getDisplayname(), boxView.send_Message.getText());
         boxView.send_Message.setText("");
     }
@@ -55,13 +58,13 @@ public class Manager implements ActionListener {
                 new Runnable() {
             public void run() {
                 while (boxView.isVisible()) {
-                   
+
                     ResultSet rs1 = chatBox.readDB();
-                
+
                     try {
-                            String text="";
+                        String text = "";
                         while (rs1.next()) {
-                             text=text+rs1.getObject("Displayname").toString() + "   "
+                            text = text + rs1.getObject("Displayname").toString() + "   "
                                     + "  " + rs1.getObject("Message").toString() + "                                             " + rs1.getObject("Date").toString() + "\n" + "\n";
 
                         }
@@ -81,6 +84,24 @@ public class Manager implements ActionListener {
         });
 
         t.start();
+    }
+    
+    public void Controllerclock(){
+        
+         Thread clock = new Thread(
+                new Runnable() {
+            public void run() {
+             while(mainFrame.isVisible()){             
+             mainFrame.Clock.setText(chatBox.getTime());
+             }
+
+            }
+        });
+
+        clock.start();
+    
+        
+    
     }
 
 }
