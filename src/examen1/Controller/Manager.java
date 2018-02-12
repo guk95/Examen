@@ -6,10 +6,12 @@
 package examen1.Controller;
 
 import examen1.Model.ChatBox;
+import examen1.Model.Tablas;
 import examen1.View.ChatBoxView;
 
 import java.awt.event.ActionListener;
 import examen1.Model.User;
+import examen1.View.Login;
 import java.awt.event.ActionEvent;
 import java.sql.ResultSet;
 import java.util.logging.Level;
@@ -26,17 +28,19 @@ public class Manager implements ActionListener {
     ChatBox chatBox;
     ChatBoxView boxView;
     MainFrame mainFrame;
+    Login login;
+    Tablas tablas;
     User user = new User();
 
     public Manager() {
     }
 
-    public Manager(ChatBox chatBox, MainFrame mainFrame) {
-        this.chatBox = chatBox;
-        this.mainFrame = mainFrame;
+    public Manager(Login login, Tablas tablas) {
+        this.login= login;
+       this.tablas=tablas;
 //        this.boxView.send_Message.addActionListener((ActionListener) this);
 //        ControllerreadDB();
-        Controllerclock();
+//        Controllerclock();
 
     }
 

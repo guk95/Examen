@@ -6,7 +6,8 @@
 package examen1.Controller;
 import examen1.Model.ChatBox;
 import examen1.View.ChatBoxView;
-import examen1.View.MainFrame;
+import examen1.View.Login;
+import examen1.Model.Tablas;
 
 
 
@@ -19,11 +20,11 @@ public class Controller {
     public Controller(){}
     
        public void Start() {
-       ChatBox chatBox= new ChatBox();
+//       ChatBox chatBox= new ChatBox();
 //        ChatBoxView boxView= new ChatBoxView();
-        MainFrame mainFrame= new MainFrame();
-        
-        Manager manager = new Manager(chatBox,mainFrame);
+        Login login= new Login();
+        Tablas tablas= new Tablas();        
+        Manager manager = new Manager(login,tablas);
    
 
     }

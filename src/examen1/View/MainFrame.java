@@ -51,7 +51,7 @@ public class MainFrame extends JFrame {
                 };
         layout.setRow(obj1);
 
-        setTitle("Dashboard Module");
+        setTitle("Examen");
         setLayout(layout.getLayOut());
         setPreferredSize(layout.setComponentDimension());
         setResizable(false);
@@ -68,7 +68,7 @@ public class MainFrame extends JFrame {
         Clock.setBounds(nsPanel.getRectangle(140, 30));
     Clock.setLocation(400,400);
         JButton btn_usuarios = new JButton();
-        btn_usuarios.setText("Usuarios");
+        btn_usuarios.setText("Crear Tablas");
         btn_usuarios.setBounds(nsPanel.getRectangle(140, 30));
 
         JButton btn_update = new JButton();

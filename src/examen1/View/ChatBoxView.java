@@ -39,7 +39,7 @@ public class ChatBoxView extends JFrame {
 
     public ChatBoxView() {
         this.Principal = new Layout(1000, 1000, 4);
-        setTitle("Prueba");
+        setTitle("ChatBox");
         setLayout(Principal.getLayOut());
         setPreferredSize(Principal.setComponentDimension());
         setResizable(false);
