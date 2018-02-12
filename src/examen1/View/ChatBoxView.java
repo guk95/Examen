@@ -28,6 +28,7 @@ import javax.swing.JTextField;
 import javax.swing.plaf.basic.BasicSplitPaneUI;
 import javax.swing.JTextArea;
 
+<<<<<<< HEAD
 public class ChatBoxView extends JFrame {
 
     public Layout Principal;
@@ -60,6 +61,37 @@ public class ChatBoxView extends JFrame {
         GenericPanel.add(send_Message);
         GenericPanel.add(send);
          GenericPanel.add(regresar);
+=======
+
+public class ChatBoxView extends JFrame {
+
+    public Layout Principal;
+    public JPanel GenericPanel = new JPanel();
+    public JTextField send_Message = new JTextField();
+    public JTextArea chatArea = new JTextArea();
+    public JTextArea chatArea1 = new JTextArea(10, 3);
+
+    public ChatBoxView() {
+        this.Principal = new Layout(1000, 1000, 4);
+        setTitle("ChatBox");
+        setLayout(Principal.getLayOut());
+        setPreferredSize(Principal.setComponentDimension());
+        setResizable(false);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        initComponents();
+    }
+
+    private void initComponents() {
+
+        Layout nsPanel = new Layout(1000, 1000, 4);
+        chatArea.setBounds(nsPanel.getRectangle(700, 700));
+
+        send_Message.setBounds(nsPanel.getRectangle(700, 200));
+        GenericPanel.setLayout(nsPanel.getLayOut());
+        GenericPanel.setSize(nsPanel.setComponentDimension());
+        GenericPanel.add(chatArea);
+        GenericPanel.add(send_Message);
+>>>>>>> origin/master
         setVisible(true);
         add(GenericPanel);
         pack();

@@ -51,7 +51,11 @@ public class ChatBox extends Thread {
     }
 
     /**
+<<<<<<< HEAD
      * Lee los ultimos 10 mensajes la base de datos.
+=======
+     * Lee los ultimos 10 mesajes la base de datos.
+>>>>>>> origin/master
      *
      * @param
      * @return return un ResulSet

@@ -39,6 +39,7 @@ public class MainFrame extends JFrame {
     public JPanel Menu = new JPanel();
     public JLabel Clock = new JLabel();
     public JPanel ClockPanel = new JPanel();
+<<<<<<< HEAD
     public JButton ChatBox = new JButton();
     public JButton verTablas = new JButton();
     JButton crearTablas = new JButton();
@@ -80,6 +81,51 @@ public class MainFrame extends JFrame {
         Menu.add(verTablas);
         Menu.add(ChatBox);
         Menu.add(crearTablas);
+=======
+
+    public MainFrame() {
+
+        this.layout = new Layout(800, 600, 4);
+
+        Object[][] obj1
+                = {
+                    {Menu, 160, 600, 4},
+                    {GenericPanel, 640, 600, 4}
+                };
+        layout.setRow(obj1);
+
+        setTitle("Examen");
+        setLayout(layout.getLayOut());
+        setPreferredSize(layout.setComponentDimension());
+        setResizable(false);
+        initComponents();
+    }
+
+    private void initComponents() {
+
+        Layout nsPanel = new Layout(160, 600, 4);     
+      
+        Menu.setLayout(nsPanel.getLayOut());
+        Menu.setSize(nsPanel.setComponentDimension());
+        Menu.setBackground(new Color(48, 44, 43));
+        Clock.setBounds(nsPanel.getRectangle(140, 30));
+    Clock.setLocation(400,400);
+        JButton btn_usuarios = new JButton();
+        btn_usuarios.setText("Crear Tablas");
+        btn_usuarios.setBounds(nsPanel.getRectangle(140, 30));
+
+        JButton btn_update = new JButton();
+        btn_update.setText("Update User");
+        btn_update.setBounds(nsPanel.getRectangle(140, 30));
+
+        JButton btn_Empleados = new JButton();
+        btn_Empleados.setText("Revisar empleado");
+        btn_Empleados.setBounds(nsPanel.getRectangle(140, 30));
+
+        Menu.add(btn_usuarios);
+        Menu.add(btn_update);
+        Menu.add(btn_Empleados);
+>>>>>>> origin/master
         GenericPanel.add(Clock);
         add(Menu);
         pack();
