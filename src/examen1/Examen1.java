@@ -20,16 +20,19 @@ public class Examen1 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        User user= new User();
-        user.setDisplayname("Mario");
-//        ChatBox chatBox= new ChatBox();
-//        chatBox.sendtoDB("Mario","Hola1");
-//         chatBox.sendtoDB("Mario","Adios1");
-//          chatBox.sendtoDB("Mario","Hola de nuevo1");
-//           chatBox.sendtoDB("Mario","Adios1");
-//            chatBox.sendtoDB("Mario","Chao1");
-        Controller controller= new Controller();
-        controller.Start();
+//        User user= new User();
+//        user.setDisplayname("Mario");
+////        ChatBox chatBox= new ChatBox();
+////        chatBox.sendtoDB("Mario","Hola1");
+////         chatBox.sendtoDB("Mario","Adios1");
+////          chatBox.sendtoDB("Mario","Hola de nuevo1");
+////           chatBox.sendtoDB("Mario","Adios1");
+////            chatBox.sendtoDB("Mario","Chao1");
+//        Controller controller= new Controller();
+//        controller.Start();
+
+        System.out.println("hola mundo");
+        
 
     }
     

@@ -47,6 +47,7 @@ public class Manager implements ActionListener {
     public void ControllersendMessage() {
         
         chatBox.sendtoDB(user.getDisplayname(), boxView.send_Message.getText());
+        boxView.send_Message.setText("");
     }
 
     public void ControllerreadDB() {
@@ -54,7 +55,7 @@ public class Manager implements ActionListener {
                 new Runnable() {
             public void run() {
                 while (boxView.isVisible()) {
-                    boxView.chatArea.setText("");
+                   
                     ResultSet rs1 = chatBox.readDB();
                 
                     try {
