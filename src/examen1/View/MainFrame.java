@@ -70,7 +70,7 @@ public class MainFrame extends JFrame {
         Menu.setSize(nsPanel.setComponentDimension());
         Menu.setBackground(new Color(48, 44, 43));
         Clock.setBounds(nsPanel.getRectangle(140, 30));
-        Clock.setLocation(400, 400);
+
         verTablas.setText("Ver Tablas");
         verTablas.setBounds(nsPanel.getRectangle(140, 30));
         ChatBox.setText("ChatBox");

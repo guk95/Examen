@@ -28,8 +28,10 @@ public class ManagerForMainFrame {
 
     }
 
-    public ManagerForMainFrame(MainFrame mainFrame) {
+    public ManagerForMainFrame(MainFrame mainFrame, ChatBox chatBox) {
         this.mainFrame = mainFrame;
+        this.chatBox = chatBox;
+        Controllerclock();
     }
 
     public void ControllersendMessage() {
@@ -76,7 +78,7 @@ public class ManagerForMainFrame {
         Thread clock = new Thread(
                 new Runnable() {
             public void run() {
-                while (mainFrame.isVisible()) {
+                while (true) {
                     mainFrame.Clock.setText(chatBox.getTime());
                 }
 

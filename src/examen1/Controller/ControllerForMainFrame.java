@@ -22,8 +22,9 @@ public class ControllerForMainFrame {
     }
 
     public void StartMainFrame() {
-
         MainFrame mainFrame = new MainFrame();
+        ChatBox chatBox= new ChatBox();
+        ManagerForMainFrame managerForMainFrame = new ManagerForMainFrame(mainFrame, chatBox);
     }
 
 }
