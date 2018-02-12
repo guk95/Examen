@@ -18,7 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.event.AncestorListener;
 import examen1.View.MainFrame;
-<<<<<<< HEAD
+
 import javax.swing.JOptionPane;
 
 /**
@@ -84,7 +84,7 @@ public class Manager implements ActionListener {
         } else {
             JOptionPane.showMessageDialog(null, "Error");
         }
-=======
+
 
 /**
  *
@@ -173,7 +173,7 @@ public class Manager implements ActionListener {
     
         
     
->>>>>>> origin/master
+
     }
 
 }
